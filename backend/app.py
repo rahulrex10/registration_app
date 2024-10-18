@@ -20,7 +20,7 @@ def create_registration():
         details = request.json
         name = details['name']
         email = details['email']
-        dob = details['dob'
+        dob = details['dob']
         # Connect to MySQL and execute insert query
         cursor = mysql.connection.cursor()
         cursor.execute("INSERT INTO Registration (name, email, dob) VALUES (%s, %s, %s)", (name, email, dob))
